@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="nodelet" type="nodelet" name="math_plus_manage" args="manager" output="screen"/>
+
+    <node pkg="nodelet" type="nodelet" name="math_plus" args="load nodelet_test/math_plus math_plus_manage" output="screen">
+        <param name="value" type="double" value="10"/>
+    </node>
+</launch>
